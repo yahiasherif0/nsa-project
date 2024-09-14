@@ -1,0 +1,200 @@
+/* General Styles */
+html, body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-attachment: fixed;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    box-sizing: border-box; /* Include padding and border in element's width and height */
+}
+
+/* Header Styles */
+header {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    box-sizing: border-box; /* Include padding and border in width and height */
+}
+
+/* Video Background */
+#header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header Content Styles */
+.header-content {
+    background: rgba(0, 0, 0, 0.7);
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out;
+    box-sizing: border-box; /* Include padding and border in width and height */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.header-content h1 {
+    font-family :monospace;
+    font-size: 7em;
+    word-spacing: -30px;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    color: #ffffffcc;
+    text-shadow: 0 0 10px #00c3ff7c;
+    stroke: #ff0000;
+}
+
+.header-content p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.6em;
+    margin-top: 15px;
+    line-height: 1.6;
+    color: #ffffffd5;
+    text-shadow: 0 0 10px #00c3ff91;
+    stroke: rgb(0, 118, 253);
+    box-shadow: #ffffff;
+
+}
+
+/* Button Container Styles */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Space above button container */
+    position: relative; /* Ensure tooltip is positioned relative to this container */
+    box-sizing: border-box; /* Include padding and border in width and height */
+}
+
+/* Explore Button Styles */
+/* Explore Button Styles */
+/* Explore Button Styles */
+.explore-button {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('https://cdn.pixabay.com/photo/2016/10/05/05/47/galaxy-1719664_960_720.jpg') no-repeat center center/cover;
+    background-blend-mode: overlay;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    bottom: 400px;
+}
+
+.explore-button:hover {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url('https://cdn.pixabay.com/photo/2016/10/05/05/47/galaxy-1719664_960_720.jpg') no-repeat center center/cover;
+    background-blend-mode: multiply;
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    color: #fff;
+    text-shadow: 0 0 10px #00c3ffcc; /* Glowing green effect */
+}
+
+.explore-button:active {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('https://cdn.pixabay.com/photo/2016/10/05/05/47/galaxy-1719664_960_720.jpg') no-repeat center center/cover;
+    background-blend-mode: darken;
+    transform: scale(1.05);
+}
+
+/* Optional: Add a blue glowing effect for another button class if needed */
+.explore-button-blue:hover {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url('https://cdn.pixabay.com/photo/2016/10/05/05/47/galaxy-1719664_960_720.jpg') no-repeat center center/cover;
+    background-blend-mode: multiply;
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 255, 0.8); /* Glowing blue effect */
+}
+
+
+/* Info Button Styles */
+.info-button {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.6em; /* Smaller font size */
+    padding: 4px 8px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('https://cdn.pixabay.com/photo/2016/10/05/05/47/galaxy-1719664_960_720.jpg') no-repeat center center/cover;
+    background-blend-mode: overlay;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    box-sizing: border-box; /* Include padding and border in width and height */
+    bottom : 2001px ;
+}
+
+.info-button:hover {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url('https://cdn.pixabay.com/photo/2016/10/05/05/47/galaxy-1719664_960_720.jpg') no-repeat center center/cover;
+    background-blend-mode: multiply;
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.info-button:active {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('https://cdn.pixabay.com/photo/2016/10/05/05/47/galaxy-1719664_960_720.jpg') no-repeat center center/cover;
+    background-blend-mode: darken;
+    transform: scale(1.05);
+}
+
+/* Tooltip Styles */
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 120%; /* Position below the button-container */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    font-size: 0.9em;
+    max-width: 300px;
+    text-align: center;
+    z-index: 100;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in width and height */
+    z-index: 10;
+}
