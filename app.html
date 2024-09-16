@@ -4,35 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Orrery</title>
-    <style>
-body {
-    margin: 0; 
-    overflow: hidden; 
-}
-
-button.planet-button {
-    background-color: rgba(0, 0, 0, 0); 
-    color: rgba(0, 0, 0, 0); 
-    border: none; 
-    border-radius: 0px; 
-    padding: 200px 80px;
-    font-size: 100.6px; 
-    font-family: Arial, sans-serif; 
-    cursor: pointer; 
-    transition: transform 0.0s ease, background-color 0.0s ease; 
-}
-
-button.planet-button:hover {
-    background-color: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, 0); 
-}
-
-    </style>
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/message.css">
 </head>
 <body>
+    <!-- Overlay and message container -->
+    <div id="messageOverlay">
+        <div id="messageContainer">
+            <h1 id="messageTitle">Welcome to the Solar System Simulation</h1>
+            <h2 id="messageSubtitle">Start exploring by clicking on the planet you want to visit.</h2>
+            <img id="messageImage" src="/assets/ins.png" alt="Message Image">
+            <button id="messageButton">Enter</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle the message button click
+        document.getElementById('messageButton')?.addEventListener('click', function() {
+            document.getElementById('messageOverlay').style.display = 'none';
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://82mou.github.io/threejs/js/OrbitControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tween.js@18.6.4/dist/tween.min.js"></script>
-    <script src="app.js"></script> 
+    <script src="app.js"></script>
 </body>
 </html>

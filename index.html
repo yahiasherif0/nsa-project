@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space App</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header>
         <video autoplay muted loop id="header-video">
-            <source src="space.mp4" type="video/mp4">
+            <source src="assets/space.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="header-content">
@@ -17,8 +17,9 @@
             <p>Your gateway to the universe</p>
             <div class="button-container">
                 <a href="app.html" class="explore-button">Explore Now</a>
-                <a href="#" class="info-button" id="info-button">What are NEOS?</a>
-                <div class="tooltip" id="tooltip">NEOS (Near-Earth Objects) are asteroids or comets that come within a certain distance of Earth. They are monitored to track their potential impact with our planet.</div>
+                <a href="neo.html" class="info-button">What are NEOS?</a> <!-- Updated href to new HTML file -->
+                <canvas class="webgl"></canvas>
+                <!-- Removed the tooltip -->
             </div>
         </div>
     </header>
