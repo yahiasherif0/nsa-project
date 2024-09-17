@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const tooltip = document.getElement
 
     
-    // Add a fade-in animation to header content
     headerContent.style.opacity = 0;
     headerContent.style.transform = 'translateY(-50px)';
     headerContent.style.transition = 'opacity 1s ease, transform 1s ease';

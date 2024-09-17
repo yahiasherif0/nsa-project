@@ -174,10 +174,7 @@ const messages = {
     }
 };
 
-// Function to show the planet message box
-// Function to show the planet message box
-// Function to show the planet message box
-// Function to show the planet message box
+
 function showPlanetMessage(celestialBody) {
     const message = messages[celestialBody.userData.name];
     if (message) {
@@ -187,21 +184,20 @@ function showPlanetMessage(celestialBody) {
 
         if (titleElem && textElem && planetMessageBox) {
             titleElem.textContent = message.title;
-            textElem.innerHTML = message.text; // Use innerHTML to render HTML tags
+            textElem.innerHTML = message.text; 
 
-            // Check if the message box is already visible
             if (planetMessageBox.style.display === 'flex') {
-                // Hide the message box if it's already visible
-                planetMessageBox.style.opacity = '0'; // Start fade-out transition
+                
+                planetMessageBox.style.opacity = '0'; 
                 setTimeout(() => {
-                    planetMessageBox.style.display = 'none'; // Hide message box after transition
-                }, 500); // Duration of the fade-out transition
+                    planetMessageBox.style.display = 'none'; 
+                }, 500); 
             } else {
-                // Show the message box if it's hidden
-                planetMessageBox.style.display = 'flex'; // Ensure the message box is displayed
+             
+                planetMessageBox.style.display = 'flex'; 
                 setTimeout(() => {
-                    planetMessageBox.style.opacity = '1'; // Trigger the fade-in transition
-                }, 10); // Short delay to ensure transition is applied
+                    planetMessageBox.style.opacity = '1'; 
+                }, 10); 
             }
         } else {
             console.error('Message elements not found');
@@ -211,31 +207,29 @@ function showPlanetMessage(celestialBody) {
     }
 }
 
-// Add event listener to the close button
 document.getElementById('closePlanetMessageButton')?.addEventListener('click', function() {
     const planetMessageBox = document.getElementById('planetMessageBox');
     if (planetMessageBox) {
-        planetMessageBox.style.opacity = '0'; // Start fade-out transition
+        planetMessageBox.style.opacity = '0'; 
         setTimeout(() => {
-            planetMessageBox.style.display = 'none'; // Hide message box after transition
-        }, 500); // Duration of the fade-out transition
+            planetMessageBox.style.display = 'none'; 
+        }, 500); 
     }
 });
 
-// Setup planet events to toggle message box visibility
+
 function setupPlanetEvents() {
-    const planets = document.querySelectorAll('.planet'); // Adjust this selector to match your planet elements
+    const planets = document.querySelectorAll('.planet'); 
     planets.forEach(planet => {
         planet.addEventListener('click', function() {
-            showPlanetMessage(this); // Call the function to show or hide the message
+            showPlanetMessage(this); 
         });
     });
 }
 
-// Call setupPlanetEvents after your planets are rendered
+
 setupPlanetEvents();
 
-// Handle the Enter button click to close the starting message overlay
 document.getElementById('messageButton')?.addEventListener('click', function() {
     const messageOverlay = document.getElementById('messageOverlay');
     if (messageOverlay) {
@@ -243,48 +237,44 @@ document.getElementById('messageButton')?.addEventListener('click', function() {
     }
 });
 
-// Add event listener to the close button
 document.getElementById('closePlanetMessageButton')?.addEventListener('click', function() {
     const planetMessageBox = document.getElementById('planetMessageBox');
     if (planetMessageBox) {
-        planetMessageBox.style.opacity = '0'; // Start fade-out transition
+        planetMessageBox.style.opacity = '0'; 
         setTimeout(() => {
-            planetMessageBox.style.display = 'none'; // Hide message box after transition
-        }, 500); // Duration of the fade-out transition
+            planetMessageBox.style.display = 'none'; 
+        }, 500); 
     }
 });
 
-// Optional: Add event listener to the planet to close message box
 function setupPlanetEvents() {
-    const planets = document.querySelectorAll('.planet'); // Adjust this selector to match your planet elements
+    const planets = document.querySelectorAll('.planet'); 
     planets.forEach(planet => {
         planet.addEventListener('click', function() {
             const planetMessageBox = document.getElementById('planetMessageBox');
             if (planetMessageBox) {
-                planetMessageBox.style.opacity = '0'; // Start fade-out transition
+                planetMessageBox.style.opacity = '0'; 
                 setTimeout(() => {
-                    planetMessageBox.style.display = 'none'; // Hide message box after transition
-                }, 500); // Duration of the fade-out transition
+                    planetMessageBox.style.display = 'none'; 
+                }, 500);
             }
         });
     });
 }
 
-// Call setupPlanetEvents after your planets are rendered
+
 setupPlanetEvents();
 
 
 
-// Add event listener to the close button
 document.getElementById('closePlanetMessageButton')?.addEventListener('click', function() {
     const planetMessageBox = document.getElementById('planetMessageBox');
     if (planetMessageBox) {
         planetMessageBox.style.display = 'none';
-        planetMessageBox.style.opacity = '0'; // Hide the message box with a fade-out effect
+        planetMessageBox.style.opacity = '0'; 
     }
 });
 
-// Handle the Enter button click to close the starting message overlay
 document.getElementById('messageButton')?.addEventListener('click', function() {
     const messageOverlay = document.getElementById('messageOverlay');
     if (messageOverlay) {
