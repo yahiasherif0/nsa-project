@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#messageOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.253);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#messageContainer {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0);
+    color: #00000000;
+    max-width: 100%;
+    width: 700px;
+    height: 3900px;
+    top: -200px;
+    left: 20px;
+}
+
+#messageTitle {
+    font-size: 1em;
+    margin: 0;
+    padding-bottom: 2px;
+    position: relative;
+    top: 10px;
+}
+
+#messageSubtitle {
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    position: relative;
+    top: 1px;
+}
+
+#messageImage {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    position: relative;
+    top: -435px;
+    left: 15px;
+    border: #ffffff;
+}
+
+#messageButton {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    font-family: 'Orbitron', sans-serif;
+    border: 2px solid #00bfff;
+    background: linear-gradient(135deg, #001f3f, #007bff);
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.7), 0 0 30px rgba(0, 191, 255, 0.3);
+    margin-top: 20px;
+    position: relative;
+    top: -780px;
+    left: -20px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#messageButton:hover {
+    background: linear-gradient(135deg, #007bff, #00bfff);
+    box-shadow: 0 0 30px rgba(0, 191, 255, 1), 0 0 40px rgba(0, 191, 255, 0.6);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
