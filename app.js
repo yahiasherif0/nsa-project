@@ -18,7 +18,7 @@ controls.enableDamping = true;
 controls.dampingFactor = 0.25;
 controls.enableZoom = true;
 controls.rotateSpeed = 0.3; // Reduce rotate speed for less sensitivity
-controls.zoomSpeed = 0.8;   // Adjust zoom speed to change sensitivity
+controls.zoomSpeed = 1;   // Adjust zoom speed to change sensitivity
 
 // Load textures
 const textureLoader = new THREE.TextureLoader();
@@ -73,7 +73,7 @@ moon.position.set(50, 0, 0);
 
 // Create and add rings for Saturn
 const ringsTexture = textureLoader.load('assets/textures/ring.png');
-const ringsGeometry = new THREE.TorusGeometry(200, 6, 2300, 3000);
+const ringsGeometry = new THREE.TorusGeometry(400, 10, 2300, 3000);
 const ringsMaterial = new THREE.MeshBasicMaterial({
     map: ringsTexture,
     side: THREE.DoubleSide,
@@ -105,6 +105,8 @@ let cameraStartPos = new THREE.Vector3();
 let cameraEndPos = new THREE.Vector3();
 let moveSpeed = 0.01;
 let lerpAlpha = 0;
+let currentMessage = null;
+
 
 // Function to focus on a planet
 function focusOnPlanet(planet) {
@@ -154,11 +156,13 @@ function createButton(object) {
 
     button.addEventListener('click', () => {
         focusOnPlanet(object);
+        showPlanetMessage(object); // Update to call the correct function
     });
 
     document.body.appendChild(button);
     object.userData.button = button;
 }
+
 
 // Set up the raycaster
 const raycaster = new THREE.Raycaster();
